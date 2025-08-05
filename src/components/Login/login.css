@@ -1,0 +1,145 @@
+/* Estilos para a página de login dividida */
+.login-page-split {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.login-left {
+  flex: 1;
+  background-color: #9ed8c9; /* Azul (quase verde) bem clarinho */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-right {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box-split {
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-placeholder {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.clinic-name {
+  font-size: 50px;
+  font-weight: bold;
+  color: #0F1647;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-family: 'Just Me Again Down Here', cursive; /* Fonte personalizada */
+}
+
+.welcome-text-split {
+  font-size: 50px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 24px;
+  font-family: 'Abel', sans-serif; /* Fonte personalizada */
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.input-group-split {
+  margin-bottom: 16px;
+  text-align: left;
+  background-color: #5d5d5d;
+  width: 100%;
+}
+
+.input-group-split label {
+  display: block;
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.input-group-split input {
+  width: 570px;
+  height: 62px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 24px;
+  box-sizing: border-box;
+  background-color: #d9d9d9;
+}
+
+/* Centraliza o formulário dentro da caixa */
+.login-box-split form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente o conteúdo do formulário */
+  width: 100%; /* Garante que o formulário ocupe toda a largura */
+}
+
+/* Container que alinha o campo usuário */
+.user-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  margin-top: 80px; /* Adiciona um espaçamento acima do grupo de usuário */
+}
+
+/* Container que agrupa a senha e o link */
+.password-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px; /* Adiciona um pequeno espaçamento entre os itens */
+  margin-top: 20px; /* Adiciona um espaçamento acima do grupo de senha */
+}
+
+.forgot-password-split {
+  align-self: flex-end; 
+  margin-top: -8px; /* Adiciona um pequeno espaçamento acima do link */
+  margin-right: -84px; /* Adiciona um espaçamento à direita */
+  margin-bottom: 70px; /* Adiciona um espaçamento abaixo do link */
+  }
+
+.forgot-password-split a {
+  font-size: 24px;
+  font-family: 'Abel', sans-serif; /* Fonte personalizada */
+  color: #000000;
+  text-decoration: none;
+}
+
+.forgot-password-split a:hover {
+  text-decoration: underline;
+}
+
+.login-button-split {
+  width: 257px;
+  height: 59px;
+  padding: 12px;
+  background-color: #d9d9d9;
+  color: #000000;
+  border: none;
+  border-radius: 15px;
+  font-size: 27px;
+  font-weight: bold;
+  font-family: 'Abel', sans-serif; /* Fonte personalizada */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button-split:hover {
+  background-color: #bbbbbb;
+}

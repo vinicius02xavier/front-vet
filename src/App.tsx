@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Login from './components/Login/login'; 
+import Dashboard from './components/Dashboard/dashboard'; 
+import './App.css'; 
 
-function App() {
+const App: React.FC = () => {
+  // O estado 'isAuthenticated' será usado para controlar qual tela mostrar
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
+  // Função para simular o login
+  const handleLogin = (isSuccess: boolean) => {
+    if (isSuccess) {
+      setIsAuthenticated(true);
+    }
+  };
+
+  // Função para simular o logout
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isAuthenticated ? (
+        // Se autenticado, mostra o Dashboard
+        <Dashboard onLogout={handleLogout} /> 
+      ) : (
+        // Se não autenticado, mostra a tela de Login
+        <Login onLogin={handleLogin} />
+      )}
     </div>
   );
-}
+};
 
 export default App;
