@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './login.css';
+import { useNavigate } from 'react-router-dom'; 
 
 interface LoginProps {
   onLogin: (isSuccess: boolean) => void;
@@ -16,6 +17,8 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     password: '',
   });
 
+  const navigate = useNavigate(); 
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -24,10 +27,11 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Exemplo de lógica de autenticação
-    if (formData.username === 'admin' && formData.password === '123') {
+    if (formData.username === 'admin' && formData.password === 'admin') {
       onLogin(true); // Chama a prop com sucesso
+      navigate('/'); // Redireciona para a rota principal (Dashboard)
     } else {
-      alert('Usuário ou senha incorretos.');
+      alert('Usuário ou senha incorretos.'); 
       onLogin(false); // Chama a prop com falha
     }
   };

@@ -42,9 +42,9 @@
 .clinic-name {
   font-size: 50px;
   font-weight: bold;
-  color: #0F1647;
-  margin-top: 16px;
-  margin-bottom: 24px;
+  color: #0f1647;
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-family: 'Just Me Again Down Here', cursive; /* Fonte personalizada */
 }
 

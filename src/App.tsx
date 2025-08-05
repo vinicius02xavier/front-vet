@@ -1,34 +1,47 @@
 import React, { useState } from 'react';
-import Login from './components/Login/login'; 
-import Dashboard from './components/Dashboard/dashboard'; 
-import './App.css'; 
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/Login/login';
+import Dashboard from './components/Dashboard/dashboard';
+import Relatorios from './components/Relatorios/relatorios';
+import './App.css';
 
 const App: React.FC = () => {
-  // O estado 'isAuthenticated' será usado para controlar qual tela mostrar
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  // Função para simular o login
+  // handleLogin e handleLogout agora apenas atualizam o estado de autenticação.
+  // A navegação será feita dentro dos componentes Login e Dashboard.
   const handleLogin = (isSuccess: boolean) => {
     if (isSuccess) {
       setIsAuthenticated(true);
     }
   };
 
-  // Função para simular o logout
   const handleLogout = () => {
     setIsAuthenticated(false);
   };
 
   return (
-    <div className="App">
-      {isAuthenticated ? (
-        // Se autenticado, mostra o Dashboard
-        <Dashboard onLogout={handleLogout} /> 
-      ) : (
-        // Se não autenticado, mostra a tela de Login
-        <Login onLogin={handleLogin} />
-      )}
-    </div>
+    <Router> {/* O Router deve envolver toda a sua aplicação */}
+      <div className="App">
+        <Routes>
+          {/* Rota para o Login */}
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+
+          {/* Rotas Protegidas: Só acessíveis se isAuthenticated for true */}
+          <Route
+            path="/"
+            element={isAuthenticated ? <Dashboard onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/relatorios"
+            element={isAuthenticated ? <Relatorios onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+
+          {/* Redirecionar qualquer outra rota para o login se não estiver autenticado */}
+          {!isAuthenticated && <Route path="*" element={<Navigate to="/login" replace />} />}
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

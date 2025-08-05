@@ -1,5 +1,5 @@
 /* Container principal do Dashboard */
-.dashboard-container {
+.relatorios-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -11,7 +11,7 @@
 }
 
 /* Estilos do cabeçalho */
-.dashboard-header {
+.relatorios-header {
   display: flex;
   justify-content: space-between; 
   align-items: center;
@@ -30,7 +30,6 @@
 .company-logo {
   width: 100px;
   height: 100px;
-  cursor: pointer;
 }
 
 .company-name {
@@ -87,7 +86,7 @@
 }
 
 /* Conteúdo principal e grid de ações */
-.dashboard-main {
+.relatorios-main {
   flex-grow: 1;
   padding: 32px 40px;
   display: flex;
