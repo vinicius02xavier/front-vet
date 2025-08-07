@@ -3,13 +3,12 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from './components/Login/login';
 import Dashboard from './components/Dashboard/dashboard';
 import Relatorios from './components/Relatorios/relatorios';
+import Nova_Consulta from './components/Agendamento/nova_consulta';
 import './App.css';
 
 const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  // handleLogin e handleLogout agora apenas atualizam o estado de autenticação.
-  // A navegação será feita dentro dos componentes Login e Dashboard.
   const handleLogin = (isSuccess: boolean) => {
     if (isSuccess) {
       setIsAuthenticated(true);
@@ -21,7 +20,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <Router> {/* O Router deve envolver toda a sua aplicação */}
+    <Router> 
       <div className="App">
         <Routes>
           {/* Rota para o Login */}
@@ -35,6 +34,10 @@ const App: React.FC = () => {
           <Route
             path="/relatorios"
             element={isAuthenticated ? <Relatorios onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/nova_consulta"
+            element={isAuthenticated ? <Nova_Consulta onLogout={handleLogout} /> : <Navigate to="/login" replace />}
           />
 
           {/* Redirecionar qualquer outra rota para o login se não estiver autenticado */}

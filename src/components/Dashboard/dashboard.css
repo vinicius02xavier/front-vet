@@ -43,7 +43,7 @@
 }
 
 /* Estilos da navegação principal */
-.main-nav {
+.dashboard-main-nav {
   display: flex;
   justify-content: center; 
   align-items: center;
@@ -51,7 +51,7 @@
   margin: 0 40px; 
 }
 
-.main-nav ul {
+.dashboard-main-nav ul {
   display: flex;
   list-style: none;
   padding: 0;
@@ -59,7 +59,7 @@
   gap: 80px; 
 }
 
-.main-nav a {
+.dashboard-main-nav a {
   text-decoration: none;
   color: #000000;
   font-size: 22px;
@@ -67,7 +67,7 @@
   transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.dashboard-main-nav a:hover {
   color: #333;
 }
 
@@ -95,7 +95,7 @@
   align-items: center;
 }
 
-.main-title {
+.dashboard-main-title {
   font-size: 50px;
   font-family: 'Abel', sans-serif; 
   font-weight: bold;

@@ -18,6 +18,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout }) => {
     navigate('/relatorios');
   };
 
+  const nova_consultaCardClick = () => {
+    navigate('/nova_consulta');
+  };
+
   const handleLogoutClick = () => {
     onLogout(); 
     navigate('/login'); 
@@ -30,10 +34,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout }) => {
           <img src="/Images/logo.png" alt="Pata de cachorro" className="company-logo"/>
           <h1 className="company-name">VETERINÁRIA<br />FRANCISCO</h1>
         </div>
-        <nav className="main-nav">
+        <nav className="dashboard-main-nav">
           <ul>
             <li><a href="#">Consulta</a></li>
-            <li><a href="#">Agendamento</a></li>
+            <li><Link to="/nova_consulta">Agendamento</Link></li>
             <li><a href="#">Produtos</a></li>
             <li><Link to="/relatorios">Relatórios</Link></li>
           </ul>
@@ -44,9 +48,9 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout }) => {
       </header>
 
       <main className="dashboard-main">
-        <h2 className="main-title">O que você quer fazer?</h2>
+        <h2 className="dashboard-main-title">O que você quer fazer?</h2>
         <div className="actions-grid">
-          <button className="action-card">
+          <button className="action-card" onClick={() => navigate('/nova_consulta')}>
             <h3>Agendar Consulta</h3>
           </button>
           <button className="action-card">

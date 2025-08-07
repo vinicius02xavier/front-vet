@@ -1,0 +1,292 @@
+/* Container principal da página */
+.nova_consulta-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ecf3f4;
+  color: #000000;
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estilos do cabeçalho */
+.nova_consulta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #ecf3f4;
+}
+
+/* Seção do logo (imagem e nome) */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px; 
+}
+
+.company-name {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0f1647;
+  margin: 0;
+  font-family: 'Just Me Again Down Here', cursive; 
+  line-height: 1;
+}
+
+/* Estilos da navegação principal */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 40px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 80px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 22px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #333;
+}
+
+/* Estilos do link de logout */
+.logout-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 22px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.logout-link:hover {
+  color: #333;
+}
+
+/* Container do conteúdo principal, que engloba a barra de título e a área de duas colunas */
+.content-wrapper {
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+/* Barra de título "Nova Consulta" */
+.main-title-container {
+  background-color: #65a8c2; /* Sua cor */
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.main-title {
+  font-size: 50px; 
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  font-family: 'Abel', sans-serif; 
+  text-align: center;
+}
+
+/* Layout de duas colunas para menu e formulário */
+.main-content-area {
+  display: flex;
+  gap: 45px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+/* Menu lateral "Agendamento" */
+.menu-main {
+  flex: 0 0 280px; 
+  background-color: #9ed8c9; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.menu-main-title {
+  font-size: 36px; 
+  font-weight: 900;
+  color: #000000;
+  font-family: 'Abel', sans-serif; 
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.menu-nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+  text-align: left;
+}
+
+.menu-nav a {
+  display: block;
+  text-decoration: none;
+  color: #0000008c;
+  font-size: 22px;
+  transition: color 0.3s ease;
+  padding: 10px;
+}
+
+.menu-nav a.active {
+  color: #000000; 
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.menu-nav a:hover {
+  color: #000000;
+}
+
+/* Formulário de conteúdo */
+.form-content {
+  flex: 1;
+  background-color: #9ed8c9; 
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-title {
+  font-size: 36px;
+  color: #000000;
+  font-family: 'Abel', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+/* Container para o prefixo e o input */
+.input-prefix-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo do prefixo "Dr." */
+.input-prefix {
+  position: absolute;
+  left: 12px; 
+  color: #707070;
+  font-size: 20px;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+/* Estilo do input com o prefixo */
+.input-with-prefix {
+  padding-left: 45px !important; 
+}
+
+/* Botões do formulário */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.button-container button {
+  padding: 12px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Botão "Cancelar" */
+.btn-cancelar {
+  background-color: #92b0c4;
+}
+
+.btn-cancelar:hover {
+  background-color: #7997aa;
+}
+
+/* Botão "Agendar" */
+.btn-agendar {
+  background-color: #79aebc;
+}
+
+.btn-agendar:hover {
+  background-color: #6398a8;
+}
+
+/* Estilo para a mensagem de sucesso */
+.success-message {
+  /* Posicionamento fixo na parte inferior da tela */
+  position: fixed;
+  bottom: 20px; /* 20px acima da borda inferior */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino para o centro exato */
+  
+  /* Estilização da caixa da mensagem */
+  color: #155724; /* Cor do texto (verde escuro) */
+  background-color: #d4edda; /* Fundo verde claro */
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Garante que a mensagem fique acima de outros elementos */
+  
+  /* Efeito de transição para uma exibição mais suave */
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+/* Classe para mostrar a mensagem */
+.success-message.visible {
+  opacity: 1;
+}
