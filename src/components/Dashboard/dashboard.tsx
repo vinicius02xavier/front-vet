@@ -68,6 +68,9 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout }) => {
           <button className="action-card">
             <h3>Notificações</h3>
           </button>
+          <button className="action-card" onClick={() => navigate('/cadastro_cliente')}>
+            <h3>Cadastrar Cliente</h3>
+          </button>
         </div>
       </main>
     </div>

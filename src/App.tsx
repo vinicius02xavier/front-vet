@@ -4,7 +4,9 @@ import Login from './components/Login/login';
 import Dashboard from './components/Dashboard/dashboard';
 import Relatorios from './components/Relatorios/relatorios';
 import Nova_Consulta from './components/Agendamento/nova_consulta';
+import Remarcar_Consulta from './components/Agendamento/remarcar_consulta';
 import './App.css';
+import Cadastro_Cliente from './components/Cadastro/cadastro_cliente';
 
 const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -38,6 +40,14 @@ const App: React.FC = () => {
           <Route
             path="/nova_consulta"
             element={isAuthenticated ? <Nova_Consulta onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/remarcar_consulta"
+            element={isAuthenticated ? <Remarcar_Consulta onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/cadastro_cliente"
+            element={isAuthenticated ? <Cadastro_Cliente onLogout={handleLogout} /> : <Navigate to="/login" replace />}
           />
 
           {/* Redirecionar qualquer outra rota para o login se não estiver autenticado */}

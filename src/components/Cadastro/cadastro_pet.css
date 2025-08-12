@@ -1,5 +1,5 @@
 /* Container principal da página */
-.nova_consulta-container {
+.cadastro_cliente-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -11,7 +11,7 @@
 }
 
 /* Estilos do cabeçalho */
-.nova_consulta-header {
+.cadastro_cliente-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,19 +96,19 @@
 
 /* Barra de título "Nova Consulta" */
 .main-title-container {
-  background-color: #65a8c2;
+  background-color: #65a8c2; /* Sua cor */
   width: 100%;
+  height: 100px; /* Altura da barra de título */
   padding: 15px;
   box-sizing: border-box;
 }
 
 .main-title {
-  font-size: 50px; 
-  font-weight: 900;
-  color: white;
-  margin: 0;
+  font-size: 50px;
   font-family: 'Abel', sans-serif; 
-  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 80px;
 }
 
 /* Layout de duas colunas para menu e formulário */
@@ -144,7 +144,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 30px;
+  gap: 10px;
   text-align: left;
 }
 
@@ -202,28 +202,6 @@
   box-sizing: border-box;
 }
 
-/* Container para o prefixo e o input */
-.input-prefix-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-/* Estilo do prefixo "Dr." */
-.input-prefix {
-  position: absolute;
-  left: 12px; 
-  color: #707070;
-  font-size: 20px;
-  pointer-events: none;
-  background-color: transparent;
-}
-
-/* Estilo do input com o prefixo */
-.input-with-prefix {
-  padding-left: 45px !important; 
-}
-
 /* Botões do formulário */
 .button-container {
   display: flex;
@@ -252,12 +230,12 @@
   background-color: #7997aa;
 }
 
-/* Botão "Agendar" */
-.btn-agendar {
+/* Botão "Cadastrar" */
+.btn-cadastrar {
   background-color: #79aebc;
 }
 
-.btn-agendar:hover {
+.btn-cadastrar:hover {
   background-color: #6398a8;
 }
 

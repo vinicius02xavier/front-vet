@@ -24,7 +24,7 @@ const Relatorios: React.FC<RelatoriosProps> = ({ onLogout }) => {
         <nav className="main-nav">
           <ul>
             <li><a href="#">Consulta</a></li>
-            <li><a href="#">Agendamento</a></li>
+            <li><Link to="/nova_consulta">Agendamento</Link></li>
             <li><Link to="/relatorios">Relatórios</Link></li>
           </ul>
         </nav>
@@ -34,7 +34,7 @@ const Relatorios: React.FC<RelatoriosProps> = ({ onLogout }) => {
       </header>
 
       <main className="relatorios-main">
-        <h2 className="main-title">Relatórios</h2>
+        <h2 className="dashboard-main-title">Relatórios</h2>
         <div className="actions-grid">
           <button className="action-card">
             <h3>Prontuários</h3>

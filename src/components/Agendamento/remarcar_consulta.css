@@ -1,5 +1,5 @@
 /* Container principal da página */
-.nova_consulta-container {
+.remarcar_consulta-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -11,7 +11,7 @@
 }
 
 /* Estilos do cabeçalho */
-.nova_consulta-header {
+.remarcar_consulta-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,7 +96,7 @@
 
 /* Barra de título "Nova Consulta" */
 .main-title-container {
-  background-color: #65a8c2;
+  background-color: #65a8c2; /* Sua cor */
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
@@ -253,11 +253,11 @@
 }
 
 /* Botão "Agendar" */
-.btn-agendar {
+.btn-reagendar {
   background-color: #79aebc;
 }
 
-.btn-agendar:hover {
+.btn-reagendar:hover {
   background-color: #6398a8;
 }
 
