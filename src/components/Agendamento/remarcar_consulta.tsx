@@ -144,7 +144,7 @@ const Remarcar_Consulta: React.FC<Remarcar_ConsultaProps> = ({ onLogout }) => {
                 </div>
                 <nav className="main-nav">
                     <ul>
-                        <li><a href="#">Consulta</a></li>
+                        <li><Link to="/consultas_dia">Consulta</Link></li>
                         <li><Link to="/nova_consulta">Agendamento</Link></li>
                         <li><a href="#">Produtos</a></li>
                         <li><Link to="/relatorios">Relatórios</Link></li>

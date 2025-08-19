@@ -43,9 +43,14 @@ const Cadastro_Pet: React.FC<Cadatro_PetProps> = ({ onLogout }) => {
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-    }
 
-        setCadastroMessage('Tutor cadastrado com sucesso!');
+        //Lógica para verificar se os campos estão preenchidos
+        if (!name || !especie || !idade || !cor) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+        
+        setCadastroMessage('Pet cadastrado com sucesso!');
         setShowMessage(true);
 
         /* Limpa os dados do formulário */
@@ -55,7 +60,7 @@ const Cadastro_Pet: React.FC<Cadatro_PetProps> = ({ onLogout }) => {
             setShowMessage(false);
             setCadastroMessage('');
         }, 5000);
-    };
+    }
 
     return (
         <div className="cadastro_pet-container">
@@ -66,7 +71,7 @@ const Cadastro_Pet: React.FC<Cadatro_PetProps> = ({ onLogout }) => {
                 </div>
                 <nav className="main-nav">
                     <ul>
-                        <li><a href="#">Consulta</a></li>
+                        <li><Link to="/consultas_dia">Consulta</Link></li>
                         <li><Link to="/nova_consulta">Agendamento</Link></li>
                         <li><a href="#">Produtos</a></li>
                         <li><Link to="/relatorios">Relatórios</Link></li>
@@ -128,7 +133,7 @@ const Cadastro_Pet: React.FC<Cadatro_PetProps> = ({ onLogout }) => {
                                 <input
                                     type="text"
                                     id="especie"
-                                    placeholder="especie"
+                                    placeholder="Espécie"
                                     value={especie}
                                     onChange={(e) => setEspecie(e.target.value)}
                                 />
@@ -137,7 +142,7 @@ const Cadastro_Pet: React.FC<Cadatro_PetProps> = ({ onLogout }) => {
                                 <input
                                     type="raca"
                                     id="raca"
-                                    placeholder="E-mail"
+                                    placeholder="Raça"
                                     value={raca}
                                     onChange={(e) => setRaca(e.target.value)}
                                 />
@@ -146,7 +151,7 @@ const Cadastro_Pet: React.FC<Cadatro_PetProps> = ({ onLogout }) => {
                                 <input
                                     type="text"
                                     id="idade"
-                                    placeholder="Endereço"
+                                    placeholder="Idade"
                                     value={idade}
                                     onChange={(e) => setIdade(e.target.value)}
                                 />
@@ -155,7 +160,7 @@ const Cadastro_Pet: React.FC<Cadatro_PetProps> = ({ onLogout }) => {
                                 <input
                                     type="text"
                                     id="cor"
-                                    placeholder="cor"
+                                    placeholder="Cor"
                                     value={cor}
                                     onChange={(e) => setCor(e.target.value)}
                                 />

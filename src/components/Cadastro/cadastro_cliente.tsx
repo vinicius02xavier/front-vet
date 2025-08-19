@@ -164,6 +164,10 @@ const Cadastro_Cliente: React.FC<Cadatro_ClienteProps> = ({ onLogout }) => {
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
+        if (!name) {
+            alert('Por favor, preencha o nome.');
+            return;
+        }
         if (!isCpfValid(cpf)) {
             alert('Por favor, insira um CPF válido.');
             return;
@@ -198,7 +202,7 @@ const Cadastro_Cliente: React.FC<Cadatro_ClienteProps> = ({ onLogout }) => {
                 </div>
                 <nav className="main-nav">
                     <ul>
-                        <li><a href="#">Consulta</a></li>
+                        <li><Link to="/consultas_dia">Consulta</Link></li>
                         <li><Link to="/nova_consulta">Agendamento</Link></li>
                         <li><a href="#">Produtos</a></li>
                         <li><Link to="/relatorios">Relatórios</Link></li>

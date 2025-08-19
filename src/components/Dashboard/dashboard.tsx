@@ -36,7 +36,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout }) => {
         </div>
         <nav className="dashboard-main-nav">
           <ul>
-            <li><a href="#">Consulta</a></li>
+            <li><Link to="/consultas_dia">Consulta</Link></li>
             <li><Link to="/nova_consulta">Agendamento</Link></li>
             <li><a href="#">Produtos</a></li>
             <li><Link to="/relatorios">Relatórios</Link></li>
@@ -53,7 +53,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout }) => {
           <button className="action-card" onClick={() => navigate('/nova_consulta')}>
             <h3>Agendar Consulta</h3>
           </button>
-          <button className="action-card">
+          <button className="action-card" onClick={() => navigate('/consultas_dia')}>
             <h3>Consultas do Dia</h3>
           </button>
           <button className="action-card">
@@ -70,6 +70,9 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout }) => {
           </button>
           <button className="action-card" onClick={() => navigate('/cadastro_cliente')}>
             <h3>Cadastrar Cliente</h3>
+          </button>
+          <button className="action-card" onClick={() => navigate('/cadastro_pet')}>
+            <h3>Cadastrar Pet</h3>
           </button>
         </div>
       </main>

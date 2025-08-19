@@ -7,6 +7,11 @@ import Nova_Consulta from './components/Agendamento/nova_consulta';
 import Remarcar_Consulta from './components/Agendamento/remarcar_consulta';
 import './App.css';
 import Cadastro_Cliente from './components/Cadastro/cadastro_cliente';
+import Cadastro_Pet from './components/Cadastro/cadastro_pet';
+import Consultas_Dia from './components/Consulta/consultas_dia';
+import Ficha_Veterinaria from './components/Consulta/ficha_veterinaria';
+import Prescricao from './components/Consulta/prescricao';
+import Prontuario from './components/Consulta/prontuario';
 
 const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -49,7 +54,26 @@ const App: React.FC = () => {
             path="/cadastro_cliente"
             element={isAuthenticated ? <Cadastro_Cliente onLogout={handleLogout} /> : <Navigate to="/login" replace />}
           />
-
+          <Route
+            path="/cadastro_pet"
+            element={isAuthenticated ? <Cadastro_Pet onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/consultas_dia"
+            element={isAuthenticated ? <Consultas_Dia onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/ficha_veterinaria"
+            element={isAuthenticated ? <Ficha_Veterinaria onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/prescricao"
+            element={isAuthenticated ? <Prescricao onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/prontuario"
+            element={isAuthenticated ? <Prontuario onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
           {/* Redirecionar qualquer outra rota para o login se não estiver autenticado */}
           {!isAuthenticated && <Route path="*" element={<Navigate to="/login" replace />} />}
         </Routes>
