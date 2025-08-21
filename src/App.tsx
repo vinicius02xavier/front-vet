@@ -12,6 +12,7 @@ import Consultas_Dia from './components/Consulta/consultas_dia';
 import Ficha_Veterinaria from './components/Consulta/ficha_veterinaria';
 import Prescricao from './components/Consulta/prescricao';
 import Prontuario from './components/Consulta/prontuario';
+import Cancelar_Consulta from './components/Agendamento/cancelar_consulta';
 
 const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -73,6 +74,10 @@ const App: React.FC = () => {
           <Route
             path="/prontuario"
             element={isAuthenticated ? <Prontuario onLogout={handleLogout} /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/cancelar_consulta"
+            element={isAuthenticated ? <Cancelar_Consulta onLogout={handleLogout} /> : <Navigate to="/login" replace />}
           />
           {/* Redirecionar qualquer outra rota para o login se não estiver autenticado */}
           {!isAuthenticated && <Route path="*" element={<Navigate to="/login" replace />} />}
